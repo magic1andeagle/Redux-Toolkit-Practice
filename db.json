@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 5,
+      "title": "json-server",
+      "body": "typicode"
+    },
+    {
+      "id": 6,
+      "title": "json-server",
+      "body": "typicode"
+    },
+    {
+      "title": "123",
+      "body": "123",
+      "id": 7
+    },
+    {
+      "title": "123",
+      "body": "haha",
+      "id": 16
+    },
+    {
+      "title": "noviy dyrov??",
+      "body": "noviy dyrov??",
+      "id": 17
+    },
+    {
+      "title": "dada",
+      "body": "dada",
+      "id": 18
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
