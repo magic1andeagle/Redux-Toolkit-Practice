@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { IPosts } from "../models/IPosts";
 import { postAPI } from "../services/PostService";
+import "../styles/Post.css";
 
 interface PostItemProps {
   post: IPosts;
@@ -15,6 +16,7 @@ export const PostItem: FC<PostItemProps> = ({ post, remove, update }) => {
   };
 
   const handleUpdate = (event: React.MouseEvent) => {
+    event.stopPropagation();
     const title = prompt() || "";
     update({ ...post, title });
   };

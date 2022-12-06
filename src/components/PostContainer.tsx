@@ -30,20 +30,21 @@ export const PostContainer: FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleCreate}>Create Post</button>
-      {/*<button onClick={addPosts}>Add posts</button>*/}
+    <div style={{ display: "flex", margin: 10 }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {error && <h1>Произошла ошибка</h1>}
+        {isLoading && <h1>Идет загрузка...</h1>}
+        {posts?.map((post) => (
+          <PostItem
+            key={post.id}
+            post={post}
+            remove={handleRemove}
+            update={handleUpdate}
+          />
+        ))}
+      </div>
 
-      {error && <h1>Произошла ошибка</h1>}
-      {isLoading && <h1>Идет загрузка...</h1>}
-      {posts?.map((post) => (
-        <PostItem
-          key={post.id}
-          post={post}
-          remove={handleRemove}
-          update={handleUpdate}
-        />
-      ))}
+      <button onClick={handleCreate}>Create Post</button>
     </div>
   );
 };
